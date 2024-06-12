@@ -1,0 +1,254 @@
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Grid CSS */
+#heroGrid{
+  margin: 0px 5%;
+  display:grid;
+  min: height 200px;
+  height:15vh;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 25% 25% 25% 25%;
+  outline:1px solid blue;
+
+}
+
+
+/* Category Grid CSS */
+.heroGridArea{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  display:flex;
+  position: relative;
+}
+/* categories Grid coding*/
+#categoryGrid{
+  outline:1px solid red;
+  margin: 0px 5%;
+  display: grid;
+  grid-template-columns:1fr 1fr 1fr;
+  grid-template-rows:auto auto auto ;
+}
+#aboutHero{
+  grid-area: 1/1/3/1;
+  justify-content: space-around;
+  background-image:url("../images/Japanese_lanterns.jpg");
+}
+
+#aboutHero2{
+  background-image:url("../images/water.jpg") ;
+  justify-content: space-around;
+  grid-area: 1/2/span 2/span 4;
+}
+.skillAbout{
+  background-color: white;
+}
+
+/* Navigation CSS */
+/* CHECK OUT THIS CODE BELOW IF YOU WANT TO GET A REFRESHER ON FLEX */
+#navBar {
+  background-color: rgba(238, 236, 236, 0.4);
+  display: flex;
+  flex-direction: row;
+  margin: 0px 5%;
+}
+#navBar h1 {
+  width: 25%;
+  font-family:'Noto Serif';
+  font-weight: 500;
+  font-size: 32px;
+  cursor: pointer;
+  color: #181818;
+}
+#navigation {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#navigation p {
+  cursor: pointer;
+  text-decoration: none;
+}
+.contact {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 25%;
+}
+.btnContact {
+  margin: 20px;
+  display: flex;
+  background-color: rgb(36, 36, 36);
+  color: white;
+  padding: 8px 10px;
+  text-align: center;
+  min-width: 80px;
+  max-width:120px;
+  border-radius: 10px;
+  
+
+}
+.icons img {
+  margin: 15px;
+  cursor: pointer;
+}
+.highlight {
+  color: #2879bb;
+  font-weight: 700;
+}
+
+/* Typography CSS */
+.subHeading{
+  text-align: center;
+  border-bottom: 2px solid rgb(32, 32, 32);
+  min-width: 300px;
+  margin:  50px auto;
+}
+.heading{
+  outline: 1px solid purple;
+  background-color:rgba(4, 4, 7, 0.8);
+  padding: 15px;
+  height: auto;
+  color: white;
+  font-size:18px ;
+  border-bottom: 5px solid #252525;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  display: flex;
+  align-items: flex-start;
+  
+}
+.heading:hover {
+  color: #4984b4;
+  background-color: rgb(73, 71, 70);
+}
+h2 {
+  font-size: 60px;
+  margin: 0px 0px;
+  color: #ffffff;
+}
+
+
+h3 {
+  font-size: 32px;
+  font-weight: 300;
+  margin: 0px 0px;
+}
+
+h4 {
+  color: white;
+  font-weight: 400;
+  font-size: 22px;
+}
+
+
+#headline {
+  z-index:1;
+  position: relative;
+  right: -10%;
+  padding: 20px;
+  min-width: 300px;
+  color:rgba(255,255,255,1);
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0px 0px;
+  color: ##181818;
+  border-radius: 4px;
+}
+/*ID and coding for each of the sections in categories*/
+.categoryGridArea{
+  outline:1px solid green;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 5px;
+  align-items: start;
+  cursor: pointer;
+  display:grid;
+  
+  border-radius: 4px;
+}
+#skill1{
+  grid-area: 1/1/span 1 /span 1;
+  align-items: start;
+  
+}
+#skill2{
+  grid-area: 1/2 span 1 /span 1;
+  
+}
+#skill3{
+  grid-area: 1/3/span 1/span 1;
+ 
+}
+#aboutMe{
+  
+  grid-area: 2/1/ span 1/ span 3;
+  
+
+}
+#img{
+  grid-area: 3/1/span 1 /span 3;
+  
+}
+
+/*this is for mobile stuff so if it is ABOVE 1000px or about a smart phone, then it will display differently*/
+@media only screen and (max-width: 1000px) {
+
+  #navigation{
+    display: none;
+  }
+  .contact{
+    margin-left: auto;
+
+  }
+}
+  @media only screen and (max-width: 600px){
+    #headline{
+      position: static;
+      margin: 20px;
+
+    }
+    
+      #aboutHero{
+        grid-area: 1/1/span 1/ span 3;
+        justify-content: space-around;
+        background-image:url("../images/Japanese_lanterns.jpg");
+      }
+    
+      
+      #aboutHero2{
+        background-image:url("../images/water.jpg") ;
+        justify-content: space-around;
+        grid-area: 2/1/span 1/span 1;
+      }
+      
+     
+      /*making it so everything is one column on mobile version*/
+      #categoryGrid{
+        grid-template: 300px 300px 300px 300px 300px /1fr;
+
+      }
+      #skill1{
+        grid-area: auto/ auto /auto/auto;
+      }
+      #skill2{
+        grid-area: auto;
+      }
+      #skill3{
+        grid-area: auto;
+      }
+      #aboutMe{
+        
+        grid-area: auto;
+      
+      }
+      #img{
+        grid-area: auto;
+      }
+   
+    }
